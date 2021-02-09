@@ -9,10 +9,10 @@ Here I will write about blockchain topics like:
 
 I made this blog with these tools:
 
-- [Gatsby](https://www.gatsbyjs.com/).
-- [Tailwind](https://tailwindcss.com/).
-- [Graphql](https://graphql.org/).
-- [Mdx](https://mdxjs.com/).
+- [Gatsby](https://www.gatsbyjs.com/)
+- [Tailwind](https://tailwindcss.com/)
+- [Graphql](https://graphql.org/)
+- [Mdx](https://mdxjs.com/)
 
 If you want me to write about a specific blockchain topic you can
 open an issue about it.
@@ -25,7 +25,7 @@ To run the project you can use these commands:
 npm run develop
 ```
 
-2. Enables graphql playground and access to your dev environment to other devices
+2. Enables graphiql and remove access to your dev environment to other devices
 ```sh
 npm start
 ```
