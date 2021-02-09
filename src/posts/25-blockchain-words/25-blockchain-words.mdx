@@ -1,0 +1,341 @@
+---
+title: 25 words and more than every blockchain developer should know
+date: 2021-02-11
+slug: 25-words-and-more-than-every-blockchain-developer-should-know
+description: Collection of blockchain words that every blockchain developer should know
+---
+
+Recently I started the amazing and confusing world of blockchain, I am feeling like I been in a bunker for a lot of time, and the world above me was evolving without me even notice. I know that many blockchain developers felt like that when they started this journey.
+
+But the most common problem is when the developers start to talk and they use common blockchain terms like **ERC 20**, **mainnet**, and **wei**, is hard to follow a conversation, article, or video explanation without knowing these words.
+
+That's why I created this article to list the most important blockchain **_keywords_** and explain a brief description for each one, so the next time you read an article or start a conversation about blockchain you will not feel lost maybe even the blockchain veterans can learn a new word.
+
+<h2 className="text-3xl font-bold">Blockchain</h2>
+
+Blockchain is a shared, immutable ledger that facilitates the process of recording transactions and tracking assets, anyone can view and verify the list of transactions inside the blockchain every time someone sent or received cryptocurrency.
+
+Main characteristics:
+
+- ▪︎ **Decentralization**: Blockchain doesn't need a bank as an intermediary for the payments. In centralized systems like banks, all the information is store in one place.
+
+In decentralized systems the information is not stored by one single entity. In fact, everyone in the network owns the information think about this like nodes in a peer to peer network like a torrent.
+
+- ▪︎ **Privacy**: Blockchain payments don't require your personal information like your name, id, or phone number, to do a successful transaction the blockchain needs your wallet address and that's it. That mechanism protects you from being hacked or having your identity stolen.
+
+- ▪︎ **Transparency**: The information of the transactions is open to anyone you can see the information of the first transaction until the last one.
+
+You cannot see the personal information of the people to whom the transactions were made, but you do know the address and the amount even in more advanced blockchains like ethereum you can see the programming code behind the transaction.
+
+- ▪︎ **Immutability**: Once a transaction was made into the blockchain is immutable, which means no one cant change the amount, or the person the transition was sent.
+
+The blockchain use complex rules for this to happen, but this is good to keep the immutability of the technology even the programming code in blockchains like ethereum is immutable once the code is uploaded.
+
+There are different kinds of blockchains the majority of blockchains shared the principles listed before, but they have their own characteristics too.
+
+Here is a list of some popular blockchains:
+
+- ▪︎ [Bitcoin](https://developer.bitcoin.org/devguide/block_chain.html).
+- ▪︎ [Ethereum](https://ethereum.org/en/).
+- ▪︎ [Diem](https://developers.diem.com/docs/technical-papers/the-diem-blockchain-paper/) formerly known as Libra.
+- ▪︎ [Hyperledger](https://www.hyperledger.org/).
+
+- <h2 className="text-3xl font-bold">Block</h2>
+
+A collection of information about blockchain transactions, a block is like a page of a ledger or record book. Each time a block is completed, it gives way to the next block in the blockchain and points to the previous block in the chain.
+
+A block inside the blockchain is compound of 4 important things:
+
+- ▪︎ **Data**: The data inside a block depends on the type of blockchain, but the majority of blockchains contain inside their data store details about the transaction such as the sender, receiver, and the amount from a list of transactions.
+
+- ▪︎ **Hash**: A unique identifier for each block inside the blockchain identifies a block and all its contents, and it's always unique like a fingerprint.
+
+This is an example of a hash:
+
+```bash
+2142950db75c3d86833027a7691d04da4bacce3b2c9f3e57f6f5cacb84ad9aec
+```
+
+<p />
+
+- ▪︎ **Previus hash**: The hash code from the block of the past, with this hash you can follow the record of transactions inside the blockchain if you follow each block with the previous hash you can get the first block. The first block is the only one without a previous hash.
+
+- ▪︎ **Nonce** (number used once): Random whole number which is a 32-bit (4 byte) field, which is adjusted by the miners, so that it becomes a valid number to be used for hashing the value of block, when the number was guessed a length of zeros is added in the front of the hash.
+
+The nonce number can be used just only once, so you need heavy computing power to guess the next nonce number.
+
+Example of hash with the nonce added:
+
+```bash
+000012fa9b916eb9078f8d98a7864e697ae83ed54f5146bd84452cdafd043c19
+```
+
+<p />
+
+- <h2 className="text-3xl font-bold">Proof of work (PoW)</h2>
+
+Proof of Work is the mechanism that allows the decentralized blockchain network to come to consensus, or agree on things like account balances and the order of transactions. This prevents users "double spending" their coins and ensures that the Ethereum chain is incredibly difficult to attack or overwrite.
+
+Main characteristics:
+
+- ▪︎ **Limited**: There is a number of transactions it can process at the same time. For example, miners can only create a Bitcoin (BTC) block every 10 minutes.
+
+- ▪︎ **High energy use**: Proof of work is expensive, labor-intense and uses a lot of energy. Creating a new block requires a lot of energy, which a recent study that compared cryptocurrency mining to aluminum mining emphasized.
+
+- ▪︎ **Transparent**: It doesn’t rely on a single third party transactor. This builds a “trustless” and transparent network. It requires users to stake their cryptocurrency to become a validator in the network.
+
+- <h2 className="text-3xl font-bold">Proof of stake (PoS)</h2>
+
+Proof of stake is a type of consensus mechanism used by blockchain networks to achieve distributed consensus.
+
+Validators are responsible for the same thing as miners in proof-of-work: ordering transactions and creating new blocks so that all nodes can agree on the state of the network.
+
+Main characteristics:
+
+- ▪︎ **Energy efficiency**: Proof of stake is the underlying mechanism that activates validators upon receipt of enough stake, this is equal to better energy efficiency you don't need to use lots of energy mining blocks.
+
+- ▪︎ **Lower barriers**: To enter as a validator hardware requirements are reduced you don't need the last graphic card to stand a chance of creating new blocks.
+
+- ▪︎ **Less centralization**: Proof of stake should lead to more nodes in the network, centralization is less probable.
+
+- <h2 className="text-3xl font-bold">51% atttack</h2>
+
+A type of attack on a decentralized network where a group gains control of the majority of nodes, they can do this if they gains the control of more than 50% of the network's mining hash rate. This would allow them to defraud the blockchain.
+
+A group of miners with a 51% can do the next things:
+
+- ▪︎ **Double spend**: The attackers would be able to reverse transactions that were completed while they were in control of the network, meaning they could double spend coins.
+
+- ▪︎ **Transaction block**: The attackers would be able to prevent new transactions from gaining confirmations, allowing them to halt payments between some or all users.
+
+- <h2 className="text-3xl font-bold">Ico</h2>
+
+Ico stands for Initial Coin Offering. Ico is an unregulated means of crowdfunding that offers a new cryptocurrency at an initial cost. This is an alternative to other more traditional methods of raising capital.
+
+An Initial Coin Offering (ICO) for cryptocurrency is like an Initial Price Offering (IPO) on the stock market, but instead of buying stock in a company you buy digital coins. In both cases, it may help to think of these as public crowdfunding efforts where investments in a new company are rewarded with assets related to the value of the company (although not always directly with an ICO).
+
+- <h2 className="text-3xl font-bold">Exchange</h2>
+
+Cryptocurrency exchanges are online platforms where you can exchange one cryptocurrency for another cryptocurrency (or for fiat currency). Most newcomers will likely have taken their first steps into the wondrous world of crypto through one of these exchanges.
+
+There are different types of exchanges here is the most populars:
+
+- ▪︎ **Traditional exchanges**: This kind of exchanges are like the traditional stock exchanges where buyers and sellers trade based on the current market price of cryptocurrencies (with the exchange playing the middle-man). These type of trading platforms generally charge a fee for each transaction.
+
+- ▪︎ **Brokers**: These are website based exchanges that are like the currency exchange at an airport. They allow customers to buy and sell cryptocurrencies at a price set by the broker (generally at the market price plus a small premium).
+
+- ▪︎ **Direct Trading Platforms**: These platforms offer direct peer-to-peer trading between buyers and sellers. Direct trading platforms of this type don’t use a fixed market price. Sellers set their own exchange rate and buyers either find sellers via the platform, or they denote the rates they are willing to buy for and the platform matches buyers and sellers.
+
+- ▪︎ **Cryptocurrency Funds**: Funds are pools of professionally managed cryptocurrency assets which allows public buy and hold cryptocurrency via the fund. Using a fund you can invest in cryptocurrency without having to purchase or store it directly.
+
+- <h2 className="text-3xl font-bold">Wallet</h2>
+
+Software that holds private keys. Used to access and control cryptocurrencies accounts and interact with the blockchain network. Keys need not be stored in a wallet, and can instead be retrieved from offline storage (i.e. a memory card or paper) for improved security.
+
+- <h2 className="text-3xl font-bold">Dapp</h2>
+
+A Dapp, or decentralized application, is a software application that runs on a distributed network. It's not hosted on a centralized server, but instead on a peer-to-peer decentralized network.
+
+Dapps examples:
+
+- ▪︎ [cryptokitties](https://www.cryptokitties.co/).
+- ▪︎ [decentraland](https://decentraland.org/).
+- ▪︎ [Tradestars](https://tradestars.app/).
+
+- <h2 className="text-3xl font-bold">Dfi</h2>
+
+Short for "decentralized finance," a broad category of Dapps aiming to provide financial services backed by the blockchain, without any intermediaries, so anyone with an internet connection can participate.
+
+Dfi examples:
+
+- ▪︎ [Compound](https://compound.finance/).
+- ▪︎ [Oasis](https://oasis.app/).
+- ▪︎ [Matcha](https://matcha.xyz/).
+
+- <h2 className="text-3xl font-bold">Cryptocurrency</h2>
+
+A Cryptocurrency is a virtual asset or virtual currency that is secured by cryptography, for that reason is impossible to counterfeit or double spend each cryptocurrency is unique. You can do transactions of cryptocurrencies inside decentralized networks based on blockchain.
+
+Main characteristics:
+
+- ▪︎ **Limited**: The quantity of each cryptocurrency is limited, if cryptocurrencies were common assets there was no value in them.
+
+- ▪︎ **Creation**: Cryptocurrencies are created when a computer solves the nonce number of a complex algorithm the reward is a new cryptocurrency for the person that resolves that algorithm.
+
+- ▪︎ **Portable**: You don't need a bank account or physical wallet to hold cryptocurrencies, you need a blockchain wallet this wallet allows transfers in cryptocurrencies and the ability to convert them back into a user's local currency.
+
+- <h2 className="text-3xl font-bold">Stablecoins</h2>
+
+Stablecoins are a class of cryptocurrency that attempts to offer price stability and are backed by a reserve asset. stablecoins gained a lot of popularity because they can use the advantages of the blockchain and they are free from the volatile nature of the other cryptocurrencies.
+
+Types of stablecoins:
+
+- ▪︎ **Centralized backed by fiat**: These are backed 1:1 by fiat currencies, which are stored in bank accounts. They are centralized because they are launched and governed by a central organization, which could be either a company, a bank or even a government. An example of this is the <a href="https://www.circle.com/en/usdc" target="_blank" rel="noopener noreferrer">USD coin</a>.
+
+- ▪︎ **Decentralized Backed By Crypto**: In this type of stablecoins you don’t have a central operator but are governed by a consensus of the users who take part in the network. An example of this is <a href="https://makerdao.com/en/" target="_blank" rel="noopener noreferrer">DAI</a>.
+
+- ▪︎ **Decentralized algorithmic**: They don’t have any collateral backing their system, and they rely on algorithms to get their price in order to remain stable.
+
+- <h2 className="text-3xl font-bold">Bitcoin</h2>
+
+Bitcoin is a digital currency and the first cryptocurrency was created by a programmer or group under the pseudonym Satoshi Nakamoto.
+
+Main characteristics:
+
+- ▪︎ **Limited supply**: This is a common characteristic of cryptocurrencies, only 21 million coins will ever be created, making Bitcoin much more immune to the inflation traditional currencies are prone to.
+
+- ▪︎ **Decentralized**: nobody controls or ‘owns’ the Bitcoin network, the transactions can never be altered or censored.
+
+- ▪︎ **Less expensive**: Is cheaper to move money through Bitcoin’s peer-to-peer network.
+
+- <h2 className="text-3xl font-bold">Ether</h2>
+
+The native cryptocurrency used by the Ethereum ecosystem, Also writen as ETH or its symbol Ξ, the Greek uppercase Xi character.
+
+Main characteristics:
+
+- ▪︎ **Gas fee**: When you send ETH or use an Ethereum application, you'll pay a small fee in ETH to use the Ethereum network this fee is called gas.
+
+- ▪︎ **Flexible amounts**: ETH is divisible up to 18 decimal places so you don't have to buy 1 whole ETH. You can buy fractions at a time – as little as 0.000000000000000001 ETH if you want.
+
+- ▪︎ **Evolution**: Ether was intended to complement rather than compete with bitcoin, but it has nonetheless emerged as a competitor on cryptocurrency exchanges.
+
+- <h2 className="text-3xl font-bold">Solidity</h2>
+
+Solidity is an object-oriented, high-level language for implementing smart contracts. Smart contracts are programs which govern the behaviour of accounts within the Ethereum state.
+
+Main characteristics:
+
+- ▪︎ **Influence**: Solidity was influenced by C++, Python and JavaScript.
+
+- ▪︎ **Syntax**: Solidity is statically typed, supports inheritance, libraries and complex user-defined types among other features.
+
+- ▪︎ **Apps**: Solidity can create contracts for uses such as voting, crowdfunding, blind auctions, and multi-signature wallets.
+
+Solidity syntax example:
+
+```jsx
+contract Coin {
+  // The keyword "public" makes variables
+  // accessible from other contracts
+  address public minter;
+  mapping (address => uint) public balances;
+
+  // Events allow clients to react to specific
+  // contract changes you declare
+  event Sent(address from, address to, uint amount);
+
+  // Constructor code is only run when the contract
+  // is created
+  constructor() {
+    minter = msg.sender;
+  }
+
+  // Sends an amount of newly created coins to an address
+  // Can only be called by the contract creator
+  function mint(address receiver, uint amount) public {
+    require(msg.sender == minter);
+    require(amount < 1e60);
+    balances[receiver] += amount;
+  }
+
+  // Sends an amount of existing coins
+  // from any caller to an address
+  function send(address receiver, uint amount) public {
+    require(amount <= balances[msg.sender], "Insufficient balance.");
+    balances[msg.sender] -= amount;
+    balances[receiver] += amount;
+    emit Sent(msg.sender, receiver, amount);
+  }
+}
+```
+
+<p />
+
+<h2 className="text-3xl font-bold">keccak 256</h2>
+
+Cryptographic hash function used in Ethereum. Keccak-256 was standardized as SHA-3.
+
+Example using solidity:
+
+```jsx
+pragma solidity ^0.5.0;
+
+contract Test {
+  function callKeccak256() public pure returns(bytes32 result){
+    return keccak256("ABC");
+  }
+}
+```
+
+Output:
+
+```jsx
+0: bytes32: result 0xe1629b9dda060bb30c7908346f6af189c16773fa148d3366701fbaa35d54f3c8
+```
+
+<p />
+
+<h2 className="text-3xl font-bold">Tokens</h2>
+
+The term “token” is used to describe altcoins (cryptocurrency alternatives to Bitcoin) that exist on another coin’s platform instead of existing on their own platform. Ethereum have tokens of this type, as do other platforms.
+
+Most commonly then, here using the most popular of these platforms Ethereum as an example, “token” would refer to any ERC-20 tokens built on the Ethereum platform that aren’t the native token Ether. The ERC 20 defines 6 mandatory functions that your smart contract should inplement.
+
+Here is an example of the ERC 20 tokens interface in solidity:
+
+```jsx
+// Optional functions
+function name() public view returns (string)
+function symbol() public view returns (string)
+function decimals() public view returns (uint8)
+// Required functions
+function totalSupply() public view returns (uint256)
+function balanceOf(address _owner) public view returns (uint256 balance)
+function transfer(address _to, uint256 _value) public returns (bool success)
+function transferFrom(address _from, address _to, uint256 _value) public returns (bool success)
+function approve(address _spender, uint256 _value) public returns (bool success)
+function allowance(address _owner, address _spender) public view returns (uint256 remaining)
+```
+
+<p />
+
+<h2 className="text-3xl font-bold">EVM (Ethereum Virtual Machine)</h2>
+
+A stack-based virtual machine that executes bytecode. In Ethereum, the execution model specifies how the system state is altered given a series of bytecode instructions and a small tuple of environmental data. This is specified through a formal model of a virtual state machine.
+
+Ethereum's state is a large data structure which holds not only all accounts and balances, but a machine state, which can change from block to block according to a pre-defined set of rules, and which can execute arbitrary machine code. The specific rules of changing state from block to block are defined by the EVM.
+
+<h2 className="text-3xl font-bold">Mainnet</h2>
+
+Short for **main network**, also known as layer 1, this is the main public blockchain. Mainnet is simply the main network, where by actual transactions take place on a distributed ledger real cryptocurrencies, real value, and real consequences. Once the solidity code is upload to the mainnet can never change.
+
+<h2 className="text-3xl font-bold">Testnet</h2>
+
+These are networks used by protocol developers or blockchain developers to test both protocol upgrades as well as potential smart contracts in a production-like environment before deployment to mainnet. Think of this as an analog to production versus staging servers.
+
+<h2 className="text-3xl font-bold">Layer 2</h2>
+
+An area of development focussed on layering improvements on top of the Ethereum protocol. These improvements are related to transaction speeds, cheaper transaction fees, and transaction privacy.
+
+<h2 className="text-3xl font-bold">Wei</h2>
+
+A wei is the smallest sub-unit of Ether there are 10^18 wei in 1 ether.
+
+<h2 className="text-3xl font-bold">Infura</h2>
+
+Infura is a scalable back-end infrastructure for building dapps on the Ethereum blockchain. It is a method for connecting to the Ethereum network without having to run a full node, and the service is provided by the company <a href="https://consensys.net" target="_blank" rel="noopener noreferrer">Consensys</a>.
+
+<h2 className="text-3xl font-bold">web3.js</h2>
+
+web3.js is a collection of libraries that allow you to interact with a local or remote ethereum node using HTTP, IPC or WebSocket.
+
+<h2 className="text-3xl font-bold">Truffle</h2>
+
+Truffle gives developers a world class development environment, testing framework, and asset pipeline for blockchains using the EVM, aiming to make life as a developer easier.
+
+<h2 className="text-3xl font-bold">Conclusion</h2>
+
+There are a ton of words when you start in the blockchain world and with the time more words are added to this vocabulary the secret to understanding is to do research and if you can't explain this to others, start again until you get it.
+
+Knowing these words just is the first step to become a blockchain engineer, the next step is hours of coding and trying until you get the level of a mature developer is the same with every new technology and blockchain is not the exception.

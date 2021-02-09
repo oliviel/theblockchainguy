@@ -1,0 +1,12 @@
+.mdx-container p {
+  margin: 1.2rem 0;
+}
+
+.mdx-container ul li a {
+  margin: 10rem 0 !important;
+}
+
+.mdx-container a {
+  color: #93c5fd;
+  text-decoration: underline;
+}
