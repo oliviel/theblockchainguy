@@ -14,6 +14,7 @@ export const query = graphql`
         description
       }
       timeToRead
+      excerpt
       body
     }
   }
@@ -25,10 +26,7 @@ const components = {
 
 const PostTemplate = ({ data: { mdx: post } }) => (
   <Layout>
-    <SEO
-      title={post.frontmatter.title}
-      description={post.frontmatter.description}
-    />
+    <SEO title={post.frontmatter.title} description={post.excerpt} />
     <h1 className="mt-12 capitalize font-bold text-4xl text-white">
       {post.frontmatter.title}
     </h1>

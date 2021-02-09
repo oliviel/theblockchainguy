@@ -9,7 +9,7 @@ module.exports = {
     description:
       'I am Holiviel Valdez a developer advocate working on the never ending journey of documenting and learning about blockchain development.',
     siteUrl: 'https://www.theblockchainguy.dev',
-    image: 'src/images/solidity-background.jpg',
+    image: './src/images/solidity-background.jpg',
     twitterUsername: '@holiviel_en',
   },
   plugins: [
