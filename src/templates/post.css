@@ -10,3 +10,7 @@
   color: #93c5fd;
   text-decoration: underline;
 }
+
+.mdx-container p a[lang="marginCustom"] {
+  margin-right: 0.3rem;
+}
