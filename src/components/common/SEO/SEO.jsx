@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import { useLocation } from '@reach/router';
 import { useStaticQuery, graphql } from 'gatsby';
+import solidityBack from '../../../../static/images/solidity-background.jpg';
 
 const query = graphql`
   query SEO {
@@ -33,7 +34,7 @@ export const SEO = ({ title, description, image, article }) => {
   const seo = {
     title: title || defaultTitle,
     description: description || defaultDescription,
-    image: `${siteUrl}${image || `images/solidity-background.jpg`}`,
+    image: image || solidityBack,
     url: `${siteUrl}${pathname}`,
   };
 

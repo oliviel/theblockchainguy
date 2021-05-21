@@ -1,0 +1,7 @@
+https://hardhat.org/getting-started/
+
+https://blog.infura.io/ethereum-javascript-libraries-web3-js-vs-ethers-js-part-i/
+
+https://blog.infura.io/ethereum-javascript-libraries-web3-js-vs-ethers-js-part-ii/
+
+https://www.trufflesuite.com/docs/truffle/overview

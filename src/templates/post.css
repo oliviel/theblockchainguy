@@ -1,5 +1,5 @@
 .mdx-container p {
-  margin: 1.2rem 0;
+  margin: 1rem 0;
 }
 
 .mdx-container ul li a {
@@ -13,4 +13,8 @@
 
 .mdx-container p a[lang="marginCustom"] {
   margin-right: 0.3rem;
+}
+
+.mdx-container pre {
+  margin: 1rem 0;
 }

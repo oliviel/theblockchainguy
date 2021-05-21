@@ -1,0 +1,93 @@
+---
+title: Hardhat vs Truffle - Which is the best for blockchain development?
+date: 2021-05-16
+slug: hardhat-vs-truffle
+description: A comparison between the two most popular blockchain development environments
+---
+
+With the recent boom of blockchain development many devlopers want to know the best tools to start working in this new and amazing world. If you spend 10 seconds googling or searching out the advice of blockchains communities, the most popular options that everyone will gonna talk about are [Hardhat](https://hardhat.org/) and [Truffle](https://www.trufflesuite.com/truffle).
+
+These are really good blockchain development environments to compile, test and deploy Ethereum software. But at the end of the day, is hard to not start doing comparisons of which tool is the best for your project necessities and which one will save you time and gives you the best development experience.
+
+This article is a comparasion between hardhat and truffle, focusing on their strength and weaknesses between the two environments to be able to make a decision of which library to use for your particular use case.
+
+<h2 className="text-3xl font-bold">👷‍♂️ What is Hardhat?</h2>
+
+Hardhat was created by [Nomiclabs](https://nomiclabs.io/), helps developers to manage and automate the common tasks of the procress of building smart contracts and Dapps, as easily introducing more functionality around this workflow. That means you can compile, run and test smart contracts at the very core.
+
+It focuses on solidity debugging, presents explicit stack traces and error messages when transactions fail.
+Hardhat comes built-in with Hardhat Network, a local Ethereum network designed for development and a CLI to interact with the core functionalities.
+
+Example of he Hardhat CLI:
+
+```bash
+$ npx hardhat
+888    888                      888 888               888
+888    888                      888 888               888
+888    888                      888 888               888
+8888888888  8888b.  888d888 .d88888 88888b.   8888b.  888888
+888    888     "88b 888P"  d88" 888 888 "88b     "88b 888
+888    888 .d888888 888    888  888 888  888 .d888888 888
+888    888 888  888 888    Y88b 888 888  888 888  888 Y88b.
+888    888 "Y888888 888     "Y88888 888  888 "Y888888  "Y888
+
+Welcome to Hardhat v2.0.8
+
+? What do you want to do? …
+❯ Create a sample project
+  Create an empty hardhat.config.js
+  Quit
+```
+
+Available Hardhat commands:
+
+```
+$ npx hardhat
+Hardhat version 2.0.8
+
+Usage: hardhat [GLOBAL OPTIONS] <TASK> [TASK OPTIONS]
+
+GLOBAL OPTIONS:
+
+  --config              A Hardhat config file.
+  --emoji               Use emoji in messages.
+  --help                Shows this message, or a task's help if its name is provided
+  --max-memory          The maximum amount of memory that Hardhat can use.
+  --network             The network to connect to.
+  --show-stack-traces   Show stack traces.
+  --tsconfig            Reserved hardhat argument -- Has no effect.
+  --verbose             Enables Hardhat verbose logging
+  --version             Shows hardhat's version.
+
+
+AVAILABLE TASKS:
+
+  accounts      Prints the list of accounts
+  check         Check whatever you need
+  clean         Clears the cache and deletes all artifacts
+  compile       Compiles the entire project, building all artifacts
+  console       Opens a hardhat console
+  flatten       Flattens and prints contracts and their dependencies
+  help          Prints this message
+  node          Starts a JSON-RPC server on top of Hardhat Network
+  run           Runs a user-defined script after compiling the project
+  test          Runs mocha tests
+
+To get help for a specific task run: npx hardhat help [task]
+```
+
+<h2 className="text-3xl font-bold">What is Truffle?</h2>
+
+Truffle was created by [ConsenSys](https://consensys.net/), is a development environment, testing framework and asset pipeline for blockchains using the Ethereum Virtual Machine (EVM). With Truffle you get a lot of important characteristics that can help you to develop Dapps like interactive console for direct contract communication, network management to deploy to any public and private network, contract compilation, linking, and binary management.
+
+Another part of the Truffle ecosistem is [Ganache](https://www.trufflesuite.com/ganache) a local Ethereum blockchain for test solidity contracts, you can use Ganache in two different ways you can use the [Ganache CLI](https://github.com/trufflesuite/ganache-cli) (the most complete version) or you can use the [Ganache UI](https://www.trufflesuite.com/docs/ganache/overview) (the most friendly version especially for beginners) is up to you to test and see which version do you prefer.
+
+Ganache UI running:
+
+![truffle logo](./truffle.png)
+
+![Ganache UI](https://www.trufflesuite.com/img/docs/ganache/quickstart/accounts.png)
+
+Sooner or later you will have to develop a UI so the people can start to interacat with your Dapps, thats why Ganache has [Drizzle](https://www.trufflesuite.com/drizzle) a collection of front end libraries. The core of Drizzle uses redux so you can use all the tools available around redux and leave the synchronization of contract and transaction data to redux.
+
+<h2 className="text-3xl font-bold">Documentation</h2>
