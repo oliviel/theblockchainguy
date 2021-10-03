@@ -21,7 +21,7 @@ export const Header = () => {
           <p className="text-base	sm:text-lg">
             Personal blog by
             <Link to="/about">
-              <span aria-label="about me" className="text-blue-300 ml-1">
+              <span aria-label="about me" className="text-blue-300 ml-1 underline">
                 Holiviel Valdez
               </span>
             </Link>

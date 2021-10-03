@@ -5,13 +5,20 @@ slug: hardhat-vs-truffle
 description: A comparison between the two most popular blockchain development environments
 ---
 
+import truffleIcon from "./truffle.png";
+import hardhatIcon from "./hardhat.png";
+import blockchainFramewokrsResult from "./popular-blockchain-frameworks.png";
+
 With the recent boom of blockchain development many devlopers want to know the best tools to start working in this new and amazing world. If you spend 10 seconds googling or searching out the advice of blockchains communities, the most popular options that everyone will gonna talk about are [Hardhat](https://hardhat.org/) and [Truffle](https://www.trufflesuite.com/truffle).
 
 These are really good blockchain development environments to compile, test and deploy Ethereum software. But at the end of the day, is hard to not start doing comparisons of which tool is the best for your project necessities and which one will save you time and gives you the best development experience.
 
 This article is a comparasion between hardhat and truffle, focusing on their strength and weaknesses between the two environments to be able to make a decision of which library to use for your particular use case.
 
-<h2 className="text-3xl font-bold">👷‍♂️ What is Hardhat?</h2>
+<h2 className="text-2xl md:text-3xl font-bold flex items-center">
+  <img className="w-8 mr-2" src={hardhatIcon} alt="truffle icon" /> What is
+  Hardhat?
+</h2>
 
 Hardhat was created by [Nomiclabs](https://nomiclabs.io/), helps developers to manage and automate the common tasks of the procress of building smart contracts and Dapps, as easily introducing more functionality around this workflow. That means you can compile, run and test smart contracts at the very core.
 
@@ -76,18 +83,194 @@ AVAILABLE TASKS:
 To get help for a specific task run: npx hardhat help [task]
 ```
 
-<h2 className="text-3xl font-bold">What is Truffle?</h2>
+<h2 className="text-2xl md:text-3xl font-bold flex items-center">
+  <img className="w-8 mr-2" src={truffleIcon} alt="truffle icon" /> What is
+  Truffle?
+</h2>
 
-Truffle was created by [ConsenSys](https://consensys.net/), is a development environment, testing framework and asset pipeline for blockchains using the Ethereum Virtual Machine (EVM). With Truffle you get a lot of important characteristics that can help you to develop Dapps like interactive console for direct contract communication, network management to deploy to any public and private network, contract compilation, linking, and binary management.
+Truffle was created by [Consensys](https://consensys.net/), is a development environment, testing framework and asset pipeline for blockchains using the Ethereum Virtual Machine (EVM). With Truffle you get a lot of important characteristics that can help you to develop Dapps like interactive console for direct contract communication, network management to deploy to any public and private network, contract compilation, linking, and binary management.
 
 Another part of the Truffle ecosistem is [Ganache](https://www.trufflesuite.com/ganache) a local Ethereum blockchain for test solidity contracts, you can use Ganache in two different ways you can use the [Ganache CLI](https://github.com/trufflesuite/ganache-cli) (the most complete version) or you can use the [Ganache UI](https://www.trufflesuite.com/docs/ganache/overview) (the most friendly version especially for beginners) is up to you to test and see which version do you prefer.
 
 Ganache UI running:
 
-![truffle logo](./truffle.png)
-
 ![Ganache UI](https://www.trufflesuite.com/img/docs/ganache/quickstart/accounts.png)
 
 Sooner or later you will have to develop a UI so the people can start to interacat with your Dapps, thats why Ganache has [Drizzle](https://www.trufflesuite.com/drizzle) a collection of front end libraries. The core of Drizzle uses redux so you can use all the tools available around redux and leave the synchronization of contract and transaction data to redux.
 
-<h2 className="text-3xl font-bold">Documentation</h2>
+<h2 className="text-2xl md:text-3xl font-bold flex items-center">
+  <img className="w-8 mr-2" src={hardhatIcon} alt="hardhat icon" />
+  Documentation
+</h2>
+
+The Hardhat [documentation](https://hardhat.org/getting-started/) is very clear and organized, you can find different guides of how to start with hardhat from the basics of the CLI to start running your local blockchain until the core aspects of harhat as the tasks, plugins, typescript support, and how to deal with different frameworks and integrations.
+
+Another really helpful section of the documentation is the [tutorial](https://hardhat.org/tutorial/) page. This is a step to step guide to create a simple smart contract from the scratch with the help of Hardhat and how to use the contract code in the Front End with React. This is very useful to start to figure out how to use Hardhat and even if you are new in blockchain development, is a good resource to know how to put everything together.
+
+The downside of the documentation is you will not find a lot of tutorials or videos outside of the main documentation or the inner communities, at least at the moment writing this article. The good thing is more companies and developers are creating resources and articles on how to use simple and complex functionalities, plus adding feedback on how to resolve the most common problems and issues this is really crucial to growing the popularity of any library or framework.
+
+<h2 className="text-2xl md:text-3xl font-bold flex items-center">
+  <img className="w-8 mr-2" src={truffleIcon} alt="truffle icon" />
+  Documentation
+</h2>
+
+The Truffle [documentation](https://www.trufflesuite.com/docs/truffle/overview) is clear and you can start learning the basics of how to create a project, migrating with Truffle develop or Ganache, connect Truffle to metamask and start interacting with the contracts.
+
+Truffle has a guides section to guide you to common tasks of Truffle development, unlike Hardhat tutorial these guides are not a step by step guide and are not so updated like others parts of the Hardhat docs. The good side is that Truffle is not a new tool for blockchain development, there are more articles and tutorials out there, so you can find many resources because of the longevity and development ecosystem built around it.
+
+<h2 className="text-2xl md:text-3xl font-bold flex items-center">
+  <img className="w-8 mr-2" src={hardhatIcon} alt="hardhat icon" />
+  Community
+</h2>
+
+The community is very active and helpful, you can find the core members and experienced developers in the official [Discord server](https://hardhat.org/discord) there you can find many channels for different topics related to Hardhat and the friendly help of many members.
+
+The downside of community is the fact that you only will find more specific help in the Discord server, there is not a support forum or many questions related or resolved about Hardhat in places like StackOverflow because is relatively new but the good part is this will change with time and the usage.
+
+<h2 className="text-2xl md:text-3xl font-bold flex items-center">
+  <img className="w-8 mr-2" src={truffleIcon} alt="truffle icon" />
+  Community
+</h2>
+
+The community of Truffle is not behind other developers communities you can find all the community channels in the [community](https://www.trufflesuite.com/community) section of the main Truffle website, I recommend asking questions in the [Discord server](https://discord.com/invite/bZwrf3x4Vs) of Consensys there is a channel just about Truffle. Therefore, you can ask all the questions you have and you will have an answer as soon as possible.
+
+You can find answers when you are stuck outside of the main community channels, on places like [StackOverflow](https://stackoverflow.com/search?q=truffle) or [Stackexchange](https://stackexchange.com/search?q=truffle) the community is big, so finding answers in these places and other kinds of blogs or forums are something common.
+
+<h2 className="text-2xl md:text-3xl font-bold flex items-center">
+  <img className="w-8 mr-2" src={hardhatIcon} alt="hardhat icon" />
+  Libraries and Plugins
+</h2>
+
+Hardhat has a complete ecosystem around plugins. Plugins are the backbone of Hardhat, they are pieces of reusable configuration that you can use in any kind of project, you can use official plugins made by Hardhat, you can use plugins made by other members of the Hardhat community or you can [make your own](https://hardhat.org/advanced/building-plugins.html).
+
+Plugins behind the scenes are extending the [Hardhat Runtime Environment (HRE)](https://hardhat.org/advanced/hardhat-runtime-environment.html), defining new tasks or overriding existing ones. For example, you can create a plugin to read your solidity code and create hooks ready to use for React.
+
+For example you can create a basic plugin addign this to `hardhat.config.js`
+
+```jsx
+// Will make hi available everywhere where the environment is accessible
+extendEnvironment((hre) => {
+  hre.hi = "Hello, Hardhat!";
+});
+
+task("envhello", (args, hre) => {
+  console.log(hre.hi);
+});
+
+module.exports = {};
+});
+```
+
+Output:
+
+```bash
+$ npx hardhat envhello
+Hello, Hardhat!
+```
+
+<h2 className="text-2xl md:text-3xl font-bold flex items-center">
+  <img className="w-8 mr-2" src={truffleIcon} alt="hardhat icon" />
+  Libraries and Plugins
+</h2>
+
+The ecosystem of Truffle is around [boxes](https://www.trufflesuite.com/boxes). Truffle boxes are helpful boilerplates that speed up your project development so you can focus on the important parts. Boxes have a combination of solidity contracts, libraries, and front end ready to use, you can find official boxes, made by the community or you can [make your own](https://www.trufflesuite.com/docs/truffle/advanced/creating-a-truffle-box) too.
+
+Each Box essentially revolves around a `truffle-box.json` configuration file. This file dictates what commands should be run at the point of unboxing so that it’s ready to go. If you're starting from scratch, there is [blueprint](https://www.trufflesuite.com/boxes/blueprint) box with the configuration file with common values.
+
+```json
+// Example of truffle-box.json
+{
+  "ignore": ["README.md", ".gitignore"],
+  "commands": {
+    "Compile contracts": "truffle compile",
+    "Migrate contracts": "truffle migrate",
+    "Test contracts": "truffle test"
+  },
+  "hooks": {
+    "post-unpack": ""
+  }
+}
+```
+
+The downside of boxes is not flexible when you want specific things. You have to use the complete box not just a part of it, and when you want to override or extend Truffle to add a specific functionality, like generate a UML grammar for each contract and use it in different projects, this is not an easy functionality to add.
+
+<div className="flex items-center">
+  <img className="w-8 mr-2 inline-block" src={hardhatIcon} alt="hardhat icon" />
+  <span className="text-xl md:text-3xl font-bold">
+    What Companies Use Hardhat?
+  </span>
+</div>
+
+<a href="https://openzeppelin.com/" target="_blank" rel="noopener noreferrer">
+  <h2 className="text-2xl font-bold my-3">Openzeppelin</h2>
+</a>
+
+OpenZeppelin provides security products to build, automate, and operate decentralized applications.
+OpenZeppelin is the premier crypto cybersecurity technology and services company, trusted by the most used DeFi and NFT projects for leading crypto organizations including Coinbase, Ethereum Foundation etc..
+
+<a href="https://www.optimism.io/" target="_blank" rel="noopener noreferrer">
+  <h2 className="text-2xl font-bold my-3">Optimism</h2>
+</a>
+
+Optimism is a Layer 2 scaling solution for Ethereum that can support all of Ethereum’s Dapps. Instead of running all computation and data on the Ethereum network, Optimism puts all transaction data on-chain and runs computation off-chain, increasing Ethereum’s transactions per second and decreasing transaction fees.
+
+<a href="https://aave.com/" target="_blank" rel="noopener noreferrer">
+  <h2 className="text-2xl font-bold my-3">Aave</h2>
+</a>
+
+Aave is a decentralised non-custodial liquidity market protocol where users can participate as depositors or borrowers. Depositors provide liquidity to the market to earn a passive income, while borrowers are able to borrow in an overcollateralised (perpetually) or undercollateralised (one-block liquidity) fashion.
+
+<div className="flex items-center">
+  <img className="w-8 mr-2 inline-block" src={truffleIcon} alt="hardhat icon" />
+  <span className="text-xl md:text-3xl font-bold">
+    What Companies Use Truffle?
+  </span>
+</div>
+
+<a href="https://www.bitgo.com/" target="_blank" rel="noopener noreferrer">
+  <h2 className="text-2xl font-bold my-3">Bitgo</h2>
+</a>
+
+BitGo is the leader in institutional digital asset custody, trading, and finance. BitGo enables clients to navigate the complex landscape of digital assets with a connected, compliant, and secure suite of solutions.
+
+<a href="https://aragon.org/" target="_blank" rel="noopener noreferrer">
+  <h2 className="text-2xl font-bold my-3">Aragon</h2>
+</a>
+
+Aragon is a decentralized app (dApp) on the Ethereum blockchain that allows anyone to create and manage a decentralized organization. The project is open source and led by the Aragon Foundation. It also includes a token, ANT, that grants voting rights to make decisions about the direction of future development.
+
+<a
+  href="https://www.jpmorganchase.com/"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <h2 className="text-2xl font-bold my-3">JPMorgan Chase & Co</h2>
+</a>
+
+JPMorgan Chase & Co. is an American multinational investment bank and financial services holding company headquartered in New York City. it is a major provider of various investment banking and financial services. As of 2021 it is the largest lender to the fossil fuel industry in the world.
+
+<h2 className="text-2xl md:text-3xl font-bold flex items-center">
+  <img className="w-8 mr-2" src={hardhatIcon} alt="hardhat icon" />
+  <img className="w-8 mx-2" src={truffleIcon} alt="hardhat icon" />
+  Popularity
+</h2>
+
+Fortunately to know who are the most popular blockchain framework we can consult the data from the last <a href="https://www.jpmorganchase.com/" target="_blank" rel="noopener noreferrer">solidity developer survey 2020</a>. The survey received 193 responses from 48 different countries. In the question about Ethereum-specific development environment, Truffle was the most popular with 35% of responses, followed by Remix 29% and Hardhat 23%.
+
+<figure>
+  <img
+    src={blockchainFramewokrsResult}
+    alt="Most popular frameworks of blockchain"
+  />
+  <figcaption className="italic my-2">
+    Survey results from{" "}
+    <a
+      href="https://www.jpmorganchase.com/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      solidity developer survey 2020
+    </a>
+    .
+  </figcaption>
+</figure>

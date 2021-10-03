@@ -27,7 +27,7 @@ const components = {
 const PostTemplate = ({ data: { mdx: post } }) => (
   <Layout>
     <SEO title={post.frontmatter.title} description={post.excerpt} />
-    <h1 className="mt-12 capitalize font-bold text-4xl text-white">
+    <h1 className="mt-12 capitalize font-bold text-3xl md:text-4xl text-white">
       {post.frontmatter.title}
     </h1>
     <p className="my-3">
