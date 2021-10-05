@@ -194,6 +194,101 @@ Each Box essentially revolves around a `truffle-box.json` configuration file. Th
 
 The downside of boxes is not flexible when you want specific things. You have to use the complete box not just a part of it, and when you want to override or extend Truffle to add a specific functionality, like generate a UML grammar for each contract and use it in different projects, this is not an easy functionality to add.
 
+<h2 className="text-2xl md:text-3xl font-bold flex items-center">
+  <img className="w-8 mr-2" src={hardhatIcon} alt="hardhat icon" />
+  Testing
+</h2>
+
+To test your smart contracts with Hardhat you have to use javascript or typescript. The most popular option to test your contracts is the library [Ethers.js](https://docs.ethers.io/v5/) to interact with the smarts contracts and [Waffle](https://getwaffle.io/) to test the smarts contracts (tests using Waffle are written with [Mocha](https://mochajs.org/) and [Chai](https://www.chaijs.com/)).
+
+Example of test using Ethers.js and Waffle:
+
+```js
+const { expect } = require("chai");
+const { ethers } = require("hardhat");
+
+describe("Greeter", function () {
+  it("Should return the new greeting once it's changed", async function () {
+    const Greeter = await ethers.getContractFactory("Greeter");
+    const greeter = await Greeter.deploy("Hello, world!");
+    await greeter.deployed();
+
+    expect(await greeter.greet()).to.equal("Hello, world!");
+
+    const setGreetingTx = await greeter.setGreeting("Hola, mundo!");
+
+    await setGreetingTx.wait();
+
+    expect(await greeter.greet()).to.equal("Hola, mundo!");
+  });
+});
+```
+
+Output:
+
+```bash
+$ npx hardhat test
+
+  Contract: Greeter
+    ✓ Should return the new greeting once it's changed (762ms)
+
+  1 passing (762ms)
+```
+
+You can use Truffle and [Web3.js](https://web3js.readthedocs.io/en/v1.5.2/) too to test your smart contracts, with this you will have compatibility with the [@truffle/contract](https://www.npmjs.com/package/@truffle/contract) package. Truffle 4 and Truffle 5 are supported using the [@nomiclabs/hardhat-truffle4](https://hardhat.org/plugins/nomiclabs-hardhat-truffle4.html) and [@nomiclabs/hardhat-truffle5](https://hardhat.org/plugins/nomiclabs-hardhat-truffle5.html).
+
+Example of test using Web3.js and Truffle:
+
+```js
+const Greeter = artifacts.require("Greeter");
+
+// Truffle test
+contract("Greeter", (accounts) => {
+  it("Should return the new greeting once it's changed", async function () {
+    const greeter = await Greeter.new("Hello, world!");
+    assert.equal(await greeter.greet(), "Hello, world!");
+
+    await greeter.setGreeting("Hola, mundo!");
+
+    assert.equal(await greeter.greet(), "Hola, mundo!");
+  });
+});
+
+describe("Greeter contract", function () {
+  let accounts;
+
+  before(async function () {
+    accounts = await web3.eth.getAccounts();
+  });
+
+  describe("Deployment", function () {
+    it("Should deploy with the right greeting", async function () {
+      const greeter = await Greeter.new("Hello, world!");
+      assert.equal(await greeter.greet(), "Hello, world!");
+
+      const greeter2 = await Greeter.new("Hola, mundo!");
+      assert.equal(await greeter2.greet(), "Hola, mundo!");
+    });
+  });
+});
+```
+
+Output:
+
+```bash
+$ npx hardhat test
+
+Contract: Greeter
+    ✓ Should return the new greeting once it's changed (265ms)
+
+  Greeter contract
+    Deployment
+      ✓ Should deploy with the right greeting (114ms)
+
+
+  2 passing (398ms)
+```
+
 <div className="flex items-center">
   <img className="w-8 mr-2 inline-block" src={hardhatIcon} alt="hardhat icon" />
   <span className="text-xl md:text-3xl font-bold">
@@ -202,20 +297,20 @@ The downside of boxes is not flexible when you want specific things. You have to
 </div>
 
 <a href="https://openzeppelin.com/" target="_blank" rel="noopener noreferrer">
-  <h2 className="text-2xl font-bold my-3">Openzeppelin</h2>
+  <h2 className="text-xl md:text-2xl font-bold my-3">Openzeppelin</h2>
 </a>
 
 OpenZeppelin provides security products to build, automate, and operate decentralized applications.
 OpenZeppelin is the premier crypto cybersecurity technology and services company, trusted by the most used DeFi and NFT projects for leading crypto organizations including Coinbase, Ethereum Foundation etc..
 
 <a href="https://www.optimism.io/" target="_blank" rel="noopener noreferrer">
-  <h2 className="text-2xl font-bold my-3">Optimism</h2>
+  <h2 className="text-xl md:text-2xl font-bold my-3">Optimism</h2>
 </a>
 
 Optimism is a Layer 2 scaling solution for Ethereum that can support all of Ethereum’s Dapps. Instead of running all computation and data on the Ethereum network, Optimism puts all transaction data on-chain and runs computation off-chain, increasing Ethereum’s transactions per second and decreasing transaction fees.
 
 <a href="https://aave.com/" target="_blank" rel="noopener noreferrer">
-  <h2 className="text-2xl font-bold my-3">Aave</h2>
+  <h2 className="text-xl md:text-2xl font-bold my-3">Aave</h2>
 </a>
 
 Aave is a decentralised non-custodial liquidity market protocol where users can participate as depositors or borrowers. Depositors provide liquidity to the market to earn a passive income, while borrowers are able to borrow in an overcollateralised (perpetually) or undercollateralised (one-block liquidity) fashion.
@@ -228,13 +323,13 @@ Aave is a decentralised non-custodial liquidity market protocol where users can 
 </div>
 
 <a href="https://www.bitgo.com/" target="_blank" rel="noopener noreferrer">
-  <h2 className="text-2xl font-bold my-3">Bitgo</h2>
+  <h2 className="text-xl md:text-2xl font-bold my-3">Bitgo</h2>
 </a>
 
 BitGo is the leader in institutional digital asset custody, trading, and finance. BitGo enables clients to navigate the complex landscape of digital assets with a connected, compliant, and secure suite of solutions.
 
 <a href="https://aragon.org/" target="_blank" rel="noopener noreferrer">
-  <h2 className="text-2xl font-bold my-3">Aragon</h2>
+  <h2 className="text-xl md:text-2xl font-bold my-3">Aragon</h2>
 </a>
 
 Aragon is a decentralized app (dApp) on the Ethereum blockchain that allows anyone to create and manage a decentralized organization. The project is open source and led by the Aragon Foundation. It also includes a token, ANT, that grants voting rights to make decisions about the direction of future development.
@@ -244,7 +339,7 @@ Aragon is a decentralized app (dApp) on the Ethereum blockchain that allows anyo
   target="_blank"
   rel="noopener noreferrer"
 >
-  <h2 className="text-2xl font-bold my-3">JPMorgan Chase & Co</h2>
+  <h2 className="text-xl md:text-2xl font-bold my-3">JPMorgan Chase & Co</h2>
 </a>
 
 JPMorgan Chase & Co. is an American multinational investment bank and financial services holding company headquartered in New York City. it is a major provider of various investment banking and financial services. As of 2021 it is the largest lender to the fossil fuel industry in the world.
@@ -255,7 +350,7 @@ JPMorgan Chase & Co. is an American multinational investment bank and financial 
   Popularity
 </h2>
 
-Fortunately to know who are the most popular blockchain framework we can consult the data from the last <a href="https://www.jpmorganchase.com/" target="_blank" rel="noopener noreferrer">solidity developer survey 2020</a>. The survey received 193 responses from 48 different countries. In the question about Ethereum-specific development environment, Truffle was the most popular with 35% of responses, followed by Remix 29% and Hardhat 23%.
+Fortunately to know who are the most popular blockchain framework we can consult the data from the last [solidity developer survey 2020](https://blog.soliditylang.org/2021/01/26/solidity-developer-survey-2020-results/). The survey received 193 responses from 48 different countries. In the question about Ethereum-specific development environment, Truffle was the most popular with 35% of responses, followed by Remix 29% and Hardhat 23%.
 
 <figure>
   <img
@@ -265,7 +360,7 @@ Fortunately to know who are the most popular blockchain framework we can consult
   <figcaption className="italic my-2">
     Survey results from{" "}
     <a
-      href="https://www.jpmorganchase.com/"
+      href="https://blog.soliditylang.org/2021/01/26/solidity-developer-survey-2020-results/"
       target="_blank"
       rel="noopener noreferrer"
     >
