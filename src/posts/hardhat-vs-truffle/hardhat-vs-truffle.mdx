@@ -289,6 +289,135 @@ Contract: Greeter
   2 passing (398ms)
 ```
 
+<h2 className="text-2xl md:text-3xl font-bold flex items-center">
+  <img className="w-8 mr-2" src={truffleIcon} alt="truffle icon" />
+  Testing
+</h2>
+
+Truffle comes with a suite of testing libraries to make testing easier out of the box, the fisrt way to test your smart contracts is with javascript and typescript. Truffle comes with Mocha, Chai and Web3.js to write javascript tests.
+
+```js
+const MetaCoin = artifacts.require("MetaCoin");
+
+contract("2nd MetaCoin test", async (accounts) => {
+  it("should put 10000 MetaCoin in the first account", async () => {
+    const instance = await MetaCoin.deployed();
+    const balance = await instance.getBalance.call(accounts[0]);
+    assert.equal(balance.valueOf(), 10000);
+  });
+
+  it("should call a function that depends on a linked library", async () => {
+    const meta = await MetaCoin.deployed();
+    const outCoinBalance = await meta.getBalance.call(accounts[0]);
+    const metaCoinBalance = outCoinBalance.toNumber();
+    const outCoinBalanceEth = await meta.getBalanceInEth.call(accounts[0]);
+    const metaCoinEthBalance = outCoinBalanceEth.toNumber();
+    assert.equal(metaCoinEthBalance, 2 * metaCoinBalance);
+  });
+
+  it("should send coin correctly", async () => {
+    const account_one = accounts[0];
+    const account_two = accounts[1];
+    let balance;
+
+    const amount = 10;
+
+    const instance = await MetaCoin.deployed();
+    const meta = instance;
+
+    balance = await meta.getBalance.call(account_one);
+    const account_one_starting_balance = balance.toNumber();
+
+    balance = await meta.getBalance.call(account_two);
+    const account_two_starting_balance = balance.toNumber();
+    await meta.sendCoin(account_two, amount, { from: account_one });
+
+    balance = await meta.getBalance.call(account_one);
+    const account_one_ending_balance = balance.toNumber();
+
+    balance = await meta.getBalance.call(account_two);
+    const account_two_ending_balance = balance.toNumber();
+
+    assert.equal(
+      account_one_ending_balance,
+      account_one_starting_balance - amount,
+      "Amount wasn't correctly taken from the sender"
+    );
+    assert.equal(
+      account_two_ending_balance,
+      account_two_starting_balance + amount,
+      "Amount wasn't correctly sent to the receiver"
+    );
+  });
+});
+```
+
+Output:
+
+```bash
+Contract: MetaCoin
+    √ should put 10000 MetaCoin in the first account (83ms)
+    √ should call a function that depends on a linked library (43ms)
+    √ should send coin correctly (122ms)
+
+
+  3 passing (293ms)
+```
+
+The other way to make tests is in Solidity, for test your contracts in scenarios more advanced. Truffle's Solidity testing framework was made with these kinds of issues in mind:
+
+- ▪︎ Solidity tests shouldn't extend from any contract. This gives you complete control of the contracts you write.
+
+- ▪︎ Solidity tests shouldn't be beholden to any assertion library. Truffle comes with a default assertion library, but you can change this library to fit your project requirements.
+
+- ▪︎ You should be able to run your Solidity tests against any Ethereum client.
+
+Example of solidity test:
+
+```js
+pragma solidity >=0.4.25 <0.6.0;
+
+import "truffle/Assert.sol";
+import "truffle/DeployedAddresses.sol";
+import "../contracts/MetaCoin.sol";
+
+contract TestMetaCoin {
+  function testInitialBalanceUsingDeployedContract() {
+    MetaCoin meta = MetaCoin(DeployedAddresses.MetaCoin());
+
+    uint expected = 10000;
+
+    Assert.equal(meta.getBalance(tx.origin), expected, "Owner should have 10000 MetaCoin initially");
+  }
+
+  function testInitialBalanceWithNewMetaCoin() {
+    MetaCoin meta = new MetaCoin();
+
+    uint expected = 10000;
+
+    Assert.equal(meta.getBalance(tx.origin), expected, "Owner should have 10000 MetaCoin initially");
+  }
+}
+```
+
+Output:
+
+```bash
+$ truffle test
+
+Compiling your contracts...
+===========================
+> Compiling ./test/TestMetaCoin.sol
+
+  TestMetaCoin
+    ✓ testInitialBalanceWithNewMetaCoin (65ms)
+
+  Contract: MetaCoin
+    ✓ should put 10000 MetaCoin in the first account (38ms)
+
+  1 passing (7s)
+```
+
 <div className="flex items-center">
   <img className="w-8 mr-2 inline-block" src={hardhatIcon} alt="hardhat icon" />
   <span className="text-xl md:text-3xl font-bold">
