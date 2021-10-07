@@ -1,19 +1,22 @@
 ---
-title: Hardhat vs Truffle - Which is the best for blockchain development?
+title: Hardhat vs Truffle vs Remix - Which is the best for blockchain development?
 date: 2021-05-16
-slug: hardhat-vs-truffle
-description: A comparison between the two most popular blockchain development environments
+slug: hardhat-vs-truffle-vs-remix
+description: A comparison between the three most popular blockchain development environments
 ---
 
 import truffleIcon from "./truffle.png";
 import hardhatIcon from "./hardhat.png";
+import remixIcon from "./remix.png";
+import ganache from "./ganache.png";
 import blockchainFramewokrsResult from "./popular-blockchain-frameworks.png";
+import remixIde from "./remix-ide.png";
 
-With the recent boom of blockchain development many devlopers want to know the best tools to start working in this new and amazing world. If you spend 10 seconds googling or searching out the advice of blockchains communities, the most popular options that everyone will gonna talk about are [Hardhat](https://hardhat.org/) and [Truffle](https://www.trufflesuite.com/truffle).
+With the recent boom of blockchain development many devlopers want to know the best tools to start working in this new and amazing world. If you spend 10 seconds googling or searching out the advice of blockchains communities, the most popular options that everyone will gonna talk about are [Hardhat](https://hardhat.org/), [Truffle](https://www.trufflesuite.com/truffle) and [Remix](https://remix-project.org/).
 
 These are really good blockchain development environments to compile, test and deploy Ethereum software. But at the end of the day, is hard to not start doing comparisons of which tool is the best for your project necessities and which one will save you time and gives you the best development experience.
 
-This article is a comparasion between hardhat and truffle, focusing on their strength and weaknesses between the two environments to be able to make a decision of which library to use for your particular use case.
+This article is a comparasion between Hardhat, Truffle and Remix, focusing on their characteristics and ecosystem to be able to make a decision of which library to use for your particular use case.
 
 <h2 className="text-2xl md:text-3xl font-bold flex items-center">
   <img className="w-8 mr-2" src={hardhatIcon} alt="truffle icon" /> What is
@@ -92,11 +95,28 @@ Truffle was created by [Consensys](https://consensys.net/), is a development env
 
 Another part of the Truffle ecosistem is [Ganache](https://www.trufflesuite.com/ganache) a local Ethereum blockchain for test solidity contracts, you can use Ganache in two different ways you can use the [Ganache CLI](https://github.com/trufflesuite/ganache-cli) (the most complete version) or you can use the [Ganache UI](https://www.trufflesuite.com/docs/ganache/overview) (the most friendly version especially for beginners) is up to you to test and see which version do you prefer.
 
-Ganache UI running:
-
-![Ganache UI](https://www.trufflesuite.com/img/docs/ganache/quickstart/accounts.png)
+<figure>
+  <img src={ganache} alt="Ganache UI" />
+  <figcaption className="italic my-2">Ganache UI running.</figcaption>
+</figure>
 
 Sooner or later you will have to develop a UI so the people can start to interacat with your Dapps, thats why Ganache has [Drizzle](https://www.trufflesuite.com/drizzle) a collection of front end libraries. The core of Drizzle uses redux so you can use all the tools available around redux and leave the synchronization of contract and transaction data to redux.
+
+<h2 className="text-2xl md:text-3xl font-bold flex items-center">
+  <img className="w-9 mr-2" src={remixIcon} alt="remix icon" />
+  What is Remix?
+</h2>
+
+Remix is an open source web and desktop app. Remix is used for write, test and deploy smart contracts, you can use it as a playground to learn and teach blockchain development. The Remix IDE (every time you see remix in this article, I am talking about the Remix IDE unless specify the contrary) is part of the Remix project which is a platform for development tools that use a plugin architecture.
+
+Remix is composed of a chain of sub-projects including Remix Plugin Engine, Remix Libs, and of course Remix IDE. It is written in javascript and supports a browser and desktop version.
+
+<figure>
+  <img src={remixIde} alt="remix IDE" />
+  <figcaption className="italic my-2">
+    The Remix IDE with solidity code.
+  </figcaption>
+</figure>
 
 <h2 className="text-2xl md:text-3xl font-bold flex items-center">
   <img className="w-8 mr-2" src={hardhatIcon} alt="hardhat icon" />
