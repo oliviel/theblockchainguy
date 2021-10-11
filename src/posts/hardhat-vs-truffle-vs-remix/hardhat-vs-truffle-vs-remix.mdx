@@ -10,6 +10,7 @@ import hardhatIcon from "./hardhat.png";
 import remixIcon from "./remix.png";
 import ganache from "./ganache.png";
 import githubEdit from "./github-edit.png";
+import remixPlugins from "./remix-plugins.png";
 import solCompiler from "./sol-compiler.png";
 import blockchainFramewokrsResult from "./popular-blockchain-frameworks.png";
 import remixIde from "./remix-ide.png";
@@ -249,7 +250,23 @@ Each Box essentially revolves around a `truffle-box.json` configuration file. Th
 }
 ```
 
-The downside of boxes is not flexible when you want specific things. You have to use the complete box not just a part of it, and when you want to override or extend Truffle to add a specific functionality, like generate a UML grammar for each contract and use it in different projects, this is not an easy functionality to add.
+The downside of boxes is not flexible when you want specific things. You have to use the complete box not just a part of it, and when you want to override or extend Truffle to add specific functionality, like generate a UML grammar for each contract and use it in different projects, this is not an easy functionality to add.
+
+<h2 className="text-2xl md:text-3xl font-bold flex items-center">
+  <img className="w-9 mr-2" src={remixIcon} alt="remix icon" />
+  Libraries and Plugins
+</h2>
+
+Remix has a plugin manager, where you can access the plugins made by the Remix team ([solidity compiler](https://github.com/dexfair/celo-remix-plugin), [solidity unit testing](https://github.com/ethereum/remix)) and made by other members of the community ([optimism compiler](https://github.com/Machinalabs/remix-optimism-compiler-plugin/issues), [celo](https://github.com/dexfair/celo-remix-plugin)). If you click the icon plug you will see the list of all available plugins, you can connect local plugins made by [yourself](https://github.com/ethereum/remix-plugin) when you want to create a custom functionality of your project.
+
+<figure>
+  <img src={remixPlugins} alt="list of remix plugins" />
+  <figcaption className="italic my-2">
+    The plugin manager of Remix with the list of all the available plugins.
+  </figcaption>
+</figure>
+
+The downside of the plugins of Remix is there is not a diversity of plugins, but this will be fixed when the blockchain ecosystem grows and more developers participate in coding and provide more plugins for each framework.
 
 <h2 className="text-2xl md:text-3xl font-bold flex items-center">
   <img className="w-8 mr-2" src={hardhatIcon} alt="hardhat icon" />
