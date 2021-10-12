@@ -11,6 +11,8 @@ import remixIcon from "./remix.png";
 import ganache from "./ganache.png";
 import githubEdit from "./github-edit.png";
 import remixPlugins from "./remix-plugins.png";
+import remixTest from "./remix-test.png";
+import remixTestcustomization from "./remix-test-customization.png";
 import solCompiler from "./sol-compiler.png";
 import blockchainFramewokrsResult from "./popular-blockchain-frameworks.png";
 import remixIde from "./remix-ide.png";
@@ -491,6 +493,60 @@ Compiling your contracts...
 
   1 passing (7s)
 ```
+
+<h2 className="text-2xl md:text-3xl font-bold flex items-center">
+  <img className="w-9 mr-2" src={remixIcon} alt="remix icon" />
+  Testing
+</h2>
+
+Testing with Remix is done only with solidity and is the easiest way to implement tests to your smart contracts especially when you are starting to learn about blockchain development. The solidity unit testing plugin is already active and you will see a contract test example to have an example of how testing works inside Remix.
+
+Example of solidity test with Remix:
+
+```jsx
+// SPDX-License-Identifier: GPL-3.0
+
+pragma solidity >=0.7.0 <0.9.0;
+import "remix_tests.sol"; // this import is automatically injected by Remix.
+import "../contracts/3_Ballot.sol";
+
+contract BallotTest {
+
+    bytes32[] proposalNames;
+
+    Ballot ballotToTest;
+    function beforeAll () public {
+        proposalNames.push(bytes32("candidate1"));
+        ballotToTest = new Ballot(proposalNames);
+    }
+
+    function checkWinningProposal () public {
+        ballotToTest.vote(0);
+        Assert.equal(ballotToTest.winningProposal(), uint(0), "proposal at index 0 should be the winning proposal");
+        Assert.equal(ballotToTest.winnerName(), bytes32("candidate1"), "candidate1 should be the winner name");
+    }
+
+    function checkWinninProposalWithReturnValue () public view returns (bool) {
+        return ballotToTest.winningProposal() == 0;
+    }
+}
+```
+
+To see if your test pass or fails, click the check icon and click run to run your tests if your test passes you will see a green text if your test fails you will see a red label. You can research the reason why they are failing, there will be assertion details to the reason for failure if you click the failed test you will see the line of code where the test fails.
+
+<figure>
+  <img src={remixTest} alt="example of solidity remix test" />
+  <figcaption className="italic my-2">
+    Remix test using solidity unit testing plugin.
+  </figcaption>
+</figure>
+
+You can customize your tests just with few clicks, like the compiler version of solidity or the EVM version to test your smart contracts in different scenarios.
+
+<figure>
+  <img src={remixTestcustomization} alt="remix customization tab" />
+  <figcaption className="italic my-2">Remix customization tab.</figcaption>
+</figure>
 
 <div className="flex items-center">
   <img className="w-8 mr-2 inline-block" src={hardhatIcon} alt="hardhat icon" />
