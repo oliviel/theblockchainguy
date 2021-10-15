@@ -17,21 +17,20 @@ import solCompiler from "./sol-compiler.png";
 import blockchainFramewokrsResult from "./popular-blockchain-frameworks.png";
 import remixIde from "./remix-ide.png";
 
-With the recent boom of blockchain development many devlopers want to know the best tools to start working in this new and amazing world. If you spend 10 seconds googling or searching out the advice of blockchains communities, the most popular options that everyone will gonna talk about are [Hardhat](https://hardhat.org/), [Truffle](https://www.trufflesuite.com/truffle) and [Remix](https://remix-project.org/).
+With the recent boom of blockchain development, many developers want to know the best tools to start working in this new and amazing world. If you spend 10 seconds googling or searching out the advice of blockchains communities, the most popular options that everyone will gonna talk about are [Hardhat](https://hardhat.org/), [Truffle](https://www.trufflesuite.com/truffle) and [Remix](https://remix-project.org/).
 
-These are really good blockchain development environments to compile, test and deploy Ethereum software. But at the end of the day, is hard to not start doing comparisons of which tool is the best for your project necessities and which one will save you time and gives you the best development experience.
+These are really good blockchain development environments to compile, test and deploy blockchain software. But at the end of the day, is hard to not start doing comparisons of which tool is the best for your project necessities and which one will save you time and gives you the best development experience.
 
-This article is a comparasion between Hardhat, Truffle and Remix, focusing on their characteristics and ecosystem to be able to make a decision of which library to use for your particular use case.
+This article is a comparison between Hardhat, Truffle, and Remix, focusing on their characteristics and ecosystem to be able to make a decision of which library to use for your particular use case.
 
 <h2 className="text-2xl md:text-3xl font-bold flex items-center">
   <img className="w-8 mr-2" src={hardhatIcon} alt="hardhat icon" /> What is
   Hardhat?
 </h2>
 
-Hardhat was created by [Nomiclabs](https://nomiclabs.io/), helps developers to manage and automate the common tasks of the procress of building smart contracts and Dapps, as easily introducing more functionality around this workflow. That means you can compile, run and test smart contracts at the very core.
+Hardhat was created by [Nomiclabs](https://nomiclabs.io/), helps developers to manage and automate the common tasks of the process of building smart contracts and Dapps, as easily introducing more functionality around this workflow. That means you can compile, run and test smart contracts at the very core.
 
-It focuses on solidity debugging, presents explicit stack traces and error messages when transactions fail.
-Hardhat comes built-in with Hardhat Network, a local Ethereum network designed for development and a CLI to interact with the core functionalities.
+It focuses on solidity debugging, presents explicit stack traces and error messages when transactions fail. Hardhat comes built-in with Hardhat Network, a local Ethereum network designed for development, and a CLI to interact with the core functionalities.
 
 Example of he Hardhat CLI:
 
@@ -96,9 +95,9 @@ To get help for a specific task run: npx hardhat help [task]
   Truffle?
 </h2>
 
-Truffle was created by [Consensys](https://consensys.net/), is a development environment, testing framework and asset pipeline for blockchains using the Ethereum Virtual Machine (EVM). With Truffle you get a lot of important characteristics that can help you to develop Dapps like interactive console for direct contract communication, network management to deploy to any public and private network, contract compilation, linking, and binary management.
+Truffle was created by [Consensys](https://consensys.net/), is a development environment, testing framework, and asset pipeline for blockchains using the Ethereum Virtual Machine (EVM). With Truffle you get a lot of important characteristics that can help you to develop Dapps like an interactive console for direct contract communication, network management to deploy to any public and private network, contract compilation, linking, and binary management.
 
-Another part of the Truffle ecosistem is [Ganache](https://www.trufflesuite.com/ganache) a local Ethereum blockchain for test solidity contracts, you can use Ganache in two different ways you can use the [Ganache CLI](https://github.com/trufflesuite/ganache-cli) (the most complete version) or you can use the [Ganache UI](https://www.trufflesuite.com/docs/ganache/overview) (the most friendly version especially for beginners) is up to you to test and see which version do you prefer.
+Another part of the Truffle ecosystem is [Ganache](https://www.trufflesuite.com/ganache) a local Ethereum blockchain for test solidity contracts, you can use Ganache in two different ways you can use the [Ganache CLI](https://github.com/trufflesuite/ganache-cli) (the most complete version) or you can use the [Ganache UI](https://www.trufflesuite.com/docs/ganache/overview) (the most friendly version especially for beginners) is up to you to test and see which version do you prefer.
 
 <figure>
   <img src={ganache} alt="Ganache UI" />
@@ -141,14 +140,14 @@ The downside of the documentation is you will not find a lot of tutorials or vid
 
 The Truffle [documentation](https://www.trufflesuite.com/docs/truffle/overview) is clear and you can start learning the basics of how to create a project, migrating with Truffle develop or Ganache, connect Truffle to metamask and start interacting with the contracts.
 
-Truffle has a guides section to guide you to common tasks of Truffle development, unlike Hardhat tutorial these guides are not a step by step guide and are not so updated like others parts of the Hardhat docs. The good side is that Truffle is not a new tool for blockchain development, there are more articles and tutorials out there, so you can find many resources because of the longevity and development ecosystem built around it.
+Truffle has a guides section to guide you to common tasks of Truffle development, these guides are not a step by step guide of a single project and are not so updated. The good side is that Truffle is not a new tool for blockchain development, there are more articles and tutorials out there, so you can find many resources because of the longevity and development ecosystem built around it.
 
 <h2 className="text-2xl md:text-3xl font-bold flex items-center">
   <img className="w-9 mr-2" src={remixIcon} alt="remix icon" />
   Documentation
 </h2>
 
-The Remix [documentation](https://remix-ide.readthedocs.io/en/latest/) is made in a way that even you are not experienced developing blockchain software will be easy for you to start learning. You will see multiple images with arrows and text to identify each tool of Remix so, you will familiarize yourself with it very fast and you will start to customize Remix for your own necessities.The documentation is not just limited to show you parts of the UI, they show you how to use remix with different integrations for example [Hardhat](https://remix-ide.readthedocs.io/en/latest/hardhat.html), how to do unit testing and other important aspects to master Remix.
+The Remix [documentation](https://remix-ide.readthedocs.io/en/latest/) is made in a way that even you are not experienced developing blockchain software will be easy for you to start learning. You will see multiple images with arrows and text to identify each tool of Remix so, you will familiarize yourself with it very fast and you will start to customize Remix for your own necessities. The documentation is not just limited to show you parts of the UI, they show you how to use remix with different integrations for example [Hardhat](https://remix-ide.readthedocs.io/en/latest/hardhat.html), how to do unit testing, and other important aspects to master Remix.
 
 <figure>
   <img src={solCompiler} alt="explanation of remix compiler" />
@@ -205,7 +204,7 @@ Hardhat has a complete ecosystem around plugins. Plugins are the backbone of Har
 
 Plugins behind the scenes are extending the [Hardhat Runtime Environment (HRE)](https://hardhat.org/advanced/hardhat-runtime-environment.html), defining new tasks or overriding existing ones. For example, you can create a plugin to read your solidity code and create hooks ready to use for React.
 
-For example you can create a basic plugin addign this to `hardhat.config.js`
+You can create a basic plugin addign this to `hardhat.config.js`
 
 ```jsx
 // Will make hi available everywhere where the environment is accessible
@@ -277,7 +276,7 @@ The downside of the plugins of Remix is there is not a diversity of plugins, but
 
 To test your smart contracts with Hardhat you have to use javascript or typescript. The most popular option to test your contracts is the library [Ethers.js](https://docs.ethers.io/v5/) to interact with the smarts contracts and [Waffle](https://getwaffle.io/) to test the smarts contracts (tests using Waffle are written with [Mocha](https://mochajs.org/) and [Chai](https://www.chaijs.com/)).
 
-Example of test using Ethers.js and Waffle:
+Example of the test using Ethers.js and Waffle:
 
 ```js
 const { expect } = require("chai");
@@ -313,7 +312,7 @@ $ npx hardhat test
 
 You can use Truffle and [Web3.js](https://web3js.readthedocs.io/en/v1.5.2/) too to test your smart contracts, with this you will have compatibility with the [@truffle/contract](https://www.npmjs.com/package/@truffle/contract) package. Truffle 4 and Truffle 5 are supported using the [@nomiclabs/hardhat-truffle4](https://hardhat.org/plugins/nomiclabs-hardhat-truffle4.html) and [@nomiclabs/hardhat-truffle5](https://hardhat.org/plugins/nomiclabs-hardhat-truffle5.html).
 
-Example of test using Web3.js and Truffle:
+Example of a test using Web3.js and Truffle:
 
 ```js
 const Greeter = artifacts.require("Greeter");
@@ -370,7 +369,7 @@ Contract: Greeter
   Testing
 </h2>
 
-Truffle comes with a suite of testing libraries to make testing easier out of the box, the fisrt way to test your smart contracts is with javascript and typescript. Truffle comes with Mocha, Chai and Web3.js to write javascript tests.
+Truffle comes with a suite of testing libraries to make testing easier out of the box, the first way to test your smart contracts is with javascript and typescript. Truffle comes with Mocha, Chai, and Web3.js to write javascript tests.
 
 ```js
 const MetaCoin = artifacts.require("MetaCoin");
@@ -559,8 +558,7 @@ You can customize your tests just with few clicks, like the compiler version of 
   <h2 className="text-xl md:text-2xl font-bold my-3">Openzeppelin</h2>
 </a>
 
-OpenZeppelin provides security products to build, automate, and operate decentralized applications.
-OpenZeppelin is the premier crypto cybersecurity technology and services company, trusted by the most used DeFi and NFT projects for leading crypto organizations including Coinbase, Ethereum Foundation etc..
+OpenZeppelin provides security products to build, automate, and operate decentralized applications. OpenZeppelin is the premier crypto cybersecurity technology and services company, trusted by the most used DeFi and NFT projects for leading crypto organizations including Coinbase, Ethereum Foundation, etc...
 
 <a href="https://www.optimism.io/" target="_blank" rel="noopener noreferrer">
   <h2 className="text-xl md:text-2xl font-bold my-3">Optimism</h2>
@@ -635,7 +633,9 @@ Moonbeam is a developer-oriented blockchain that strives to provide compatibilit
   Popularity
 </h2>
 
-Fortunately to know who are the most popular blockchain framework we can consult the data from the last [solidity developer survey 2020](https://blog.soliditylang.org/2021/01/26/solidity-developer-survey-2020-results/). The survey received 193 responses from 48 different countries. In the question about Ethereum-specific development environment, Truffle was the most popular with 35% of responses, followed by Remix 29% and Hardhat 23%.
+Fortunately to know who are the most used blockchain framework you can consult the data from the last [solidity developer survey 2020](https://blog.soliditylang.org/2021/01/26/solidity-developer-survey-2020-results/). The survey received 193 responses from 48 different countries. In the question about Ethereum-specific development environment, Truffle was the most popular with 35% of responses, followed by Remix 29% and Hardhat 23%.
+
+Even if this is a small number of people participating in this survey, you can have an idea of how are these frameworks distributed around professionals and amateurs blockchain devs.
 
 <figure>
   <img
@@ -664,8 +664,8 @@ Fortunately to know who are the most popular blockchain framework we can consult
 
 With all the information in this article, you may have a better idea of the options that give you the most popular blockchain development tools, maybe you even know what option you want to start your next project.
 
-If you ask me, my opinion is you can start with Remix because you don't even have to deal with installing dependencies in your local and you can start without so much trouble coding and learn the basics of solidity, testing, and deployment to test net even mainnets.
+My advice is you can start with Remix because you don't even have to deal with installing dependencies in your local and you can start without so much trouble coding and learn the basics of solidity, testing, and deployment to test net even mainnets.
 
 Then you can go with Hardhat because of its unopinionated nature, you can install what you exactly want and expand the Hardhat Runtime Environment, good documentation and the growing community is one of the reasons why many companies and myself use Hardhat as our main blockchain development tool.
 
-At the end of the day, the only thing you need to do is start with a tool and start creating things with it, then you can translate all the knowledge you have to any tool. The most important thing is the knowledge and experienced that will lead to starting the amazing and changing world of blockchain and web3.
+At the end of the day, the only thing you need to do is start with a tool and start creating things with it, then you can translate all the knowledge you have to any tool. The most important thing is the knowledge and experienced that will lead any project you want without worried about too much about the tool you are using.
