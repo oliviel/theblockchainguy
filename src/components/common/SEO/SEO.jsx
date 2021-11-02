@@ -59,6 +59,7 @@ export const SEO = ({ title, description, image, article }) => {
         <meta name="twitter:description" content={seo.description} />
       )}
       {seo.image && <meta name="twitter:image" content={seo.image} />}
+      <script defer data-domain="theblockchainguy.dev" src="https://plausible.io/js/plausible.js"></script>
     </Helmet>
   );
 };
