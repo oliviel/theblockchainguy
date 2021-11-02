@@ -19,10 +19,14 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sitemap',
     {
-      resolve: 'gatsby-plugin-google-analytics',
+      resolve: `gatsby-plugin-google-gtag`,
       options: {
-        trackingId: process.env.GOOGLE_TRACK_ID,
-        head: true,
+        trackingIds: [
+          process.env.GOOGLE_TRACK_ID, // Google Analytics / GA
+        ],
+        pluginConfig: {
+          head: true,
+        },
       },
     },
     {
